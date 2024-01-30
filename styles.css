@@ -1,0 +1,125 @@
+* :not(code){
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0px;
+    background-color: whitesmoke;
+    line-height: 1.5;
+}
+
+header{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#navbar > header > h1{
+    padding: 0px 10px 0px 10px;
+}
+
+#navbar{
+    
+    position: fixed;
+    border-right: 2px solid rgba(53, 35, 35, 0.5);
+    height: 100%;
+    min-width: 320px;
+}
+
+
+#navbar ul{
+    height: 75%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+ul, :not(#navbar ul){
+    line-height: 1.5em;
+}
+
+#navbar > ul > li{
+    
+    list-style: none;
+    padding: 20px;
+    width: 100%;
+    border-top: 1px solid rgb(53, 35, 35);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(125, 125, 125);
+}
+
+a:hover{
+    color: rgb(90,90,90);
+}
+
+#main-doc{
+    position: absolute;
+    margin-left: 350px;
+}
+
+code{
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: rgb(230, 226, 226);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+img{
+    background-repeat: no-repeat;
+    width: 90%;
+    max-height: 40em;
+    padding: 0px 10px 0px 10px;
+}
+
+
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar ul {
+      border: 1px solid;
+      height: 160px;
+    }
+  
+    #navbar {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-height: 275px;
+      border: none;
+      z-index: 1;
+      
+    }
+  
+    #main-doc {
+      position: relative;
+      margin-left: 0px;
+      margin-top: 350px;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    #main-doc {
+      margin-left: -10px;
+    }
+  
+    code {
+      margin-left: -20px;
+      width: 100%;
+      padding: 15px;
+      padding-left: 10px;
+      padding-right: 45px;
+      min-width: 233px;
+    }
+  }
+  

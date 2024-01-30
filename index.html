@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a Technical Documentation Page FreeCodeCamp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>C Data Structures</h1>
+        </header>
+        <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Features_of_C_Programming_Language" class="nav-link">Features of C Programming Language</a></li>
+            <li> <a href="#Static_Array" class="nav-link">Static Array</a></li>
+            <li> <a href="#Dynamic_Array" class="nav-link">Dynamic Array</a></li>
+            <li> <a href="#Stack" class="nav-link">Stack</a></li>
+            <li> <a href="#Queue" class="nav-link">Queue</a></li>
+            <li><a href="#Linked_List" class="nav-link">Linked List</a></li>
+            <li> <a href="#Binary_Tree" class="nav-link">Binary Tree</a></li>
+            <li><a href="#Hash_Table" class="nav-link">Hash Table</a></li>
+
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+
+                <p>
+                    C is a computer programming language. That means that you can use C to create lists of instructions
+                    for
+                    a computer to follow. C is one of thousands of programming languages currently in use. C has been
+                    around
+                    for several decades and has won widespread acceptance because it gives programmers maximum control
+                    and
+                    efficiency. C is an easy language to learn. It is a bit more cryptic in its style than some other
+                    languages, but you get beyond that fairly quickly.
+                </p>
+                <p>
+                    C is what is called a compiled language. This means that once you write your C program, you must run
+                    it
+                    through a C compiler to turn your program into an executable that the computer can run (execute).
+                    And
+                    here is an example of how to write Hello World in C:
+                </p>
+                <code>#include &lt;stdio.h&gt; 
+                    #include &lt;stdlib.h&gt;
+                    int main() 
+                    { 
+                        printf("Hello World!"); 
+                        return 0; 
+                    } 
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Features_of_C_Programming_Language">
+            <header>Features of C Programming Language</header>
+            <article>
+
+                <p>
+                    The core features of a programming language describe its ability and uniqueness and how beneficial
+                    it
+                    can be in developing a website or software. Listed below are some of the significant features of C
+                    language:
+                </p>
+                <ul>
+                    <li>High-Level Language</li>
+                    <li>Structured Language</li>
+                    <li>Memory Management</li>
+                    <li>Rich Library</li>
+                    <li>Extensible</li>
+                    <li>Recursion</li>
+                    <li>Pointers</li>
+                    <li>Faster</li>
+                </ul>
+            </article>
+
+
+
+
+        </section>
+
+        <section class="main-section" id="Static_Array">
+            <header>Static Array</header>
+            <article>
+
+                <p>An Array is a sequential collection of elements, of the same data type. They are stored sequentially
+                    in
+                    memory.
+                    Arrays are used to store multiple values in a single variable, instead of declaring separate
+                    variables
+                    for each value.
+                    To create an array, define the data type (like int) and specify the name of the array
+                    followed by square brackets [].
+                    To insert values to it, use a comma-separated list, inside curly braces.
+                </p>
+                <p>
+                    There are two types of arrays:
+                </p>
+                <ul>
+                    <li>
+                        Single dimensional array
+                    </li>
+                </ul>
+                <code>int myNumbers[] = {25, 50, 75, 100};
+                    </code>
+                <ul>
+                    <li>
+                        Multidimensional array
+                    </li>
+                </ul>
+                <code>float myMatrix[3][4] = {
+                            {1.0, 2.5, 3.3, 4.7},
+                            {5.2, 6.1, 7.9, 8.4},
+                            {9.8, 10.6, 11.2, 12.0}
+                        };
+                    </code>
+            </article>
+
+        </section>
+        <section class="main-section" id="Dynamic_Array">
+            <header>Dynamic Array</header>
+            <article>
+
+                <p>
+                    Array in C is static in nature, so its size should be known at compile time and we can not change
+                    the
+                    size of the array after its declaration. Due to this, we may encounter situations where our array
+                    does
+                    not have enough space left for required elements or we allotted more than the required memory
+                    leading to
+                    memory wastage. To solve this problem, dynamic arrays come into the picture. <br>
+                    A Dynamic Array is allocated memory at runtime and its size can be changed later in the program.
+
+                </p>
+                <p>
+                    We can create a dynamic array in C by using the following methods(there are more methods but these
+                    are
+                    the most used):
+                </p>
+
+                <p>
+                    Using malloc() Function:
+                </p>
+                <code> //Syntax 
+                    ptr = (cast-type*) malloc(byte-size);  
+    
+                    //Example 
+                    ptr = (int*) malloc(100 * sizeof(int));
+                </code>
+                <p>
+                    Using calloc() Function:
+                </p>
+                <code>//Syntax 
+                    ptr = (cast-type*)calloc(n, element-size); 
+    
+                    //Example 
+                    ptr = (int*) calloc(5, sizeof(float));
+                </code>
+                <p>
+                    Resizing Array Using realloc() Function:
+                </p>
+                <code>//Syntax 
+                    ptr = realloc(ptr, newSize); 
+    
+                    //Example 
+                    ptr = realloc(ptr, size * sizeof(int)); 
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Stack">
+            <header>Stack</header>
+            <article>
+                <p>A stack is a linear data structure. It follows the last in first out approach(LIFO). A new item is
+                    added at
+                    the top of a stack. Both insert and deletion operation is performed from one end of the stack. <br>
+
+                    There are two functions associated with stacks. Push function to add elements to the stack and pop
+                    function to remove elements from the stack.
+                </p>
+
+                <p>
+                    Consider the Example:
+                    <br>
+                    Imagine you have a cookie jar, and in this jar, you can add one cookie at the time. The process
+                    where you enter one cookie at a time inside the jar is called push. Similarly, you can remove one
+                    cookie at a time. This process of cookie removal from the topmost position is called a pop function.
+                    <br>
+                    The last entered cookie is the first to be removed from the jar, hence a stack follows a last in
+                    first out approach.
+                </p>
+                <code>#include &lt;limits.h&gt;
+                    
+                    #include &lt;stdio.h&gt;
+                    #include &lt;stdlib.h&gt;
+                    struct Stack {
+                         int top;
+                         unsigned capacity;
+                         int* array;
+                    };
+                    struct Stack* createStack(unsigned capacity)
+                    {
+                         struct Stack* stack = (struct Stack*)malloc(sizeof(struct Stack));
+                         stack->capacity = capacity;
+                         stack->top = -1;
+                         stack->array = (int*)malloc(stack->capacity * sizeof(int));
+                         return stack;
+                    }
+                    int isFull(struct Stack* stack)
+                    {
+                         return stack->top == stack->capacity - 1;
+                    }
+                    int isEmpty(struct Stack* stack)
+                    {
+                         return stack->top == -1;
+                    }
+                    void push(struct Stack* stack, int item)
+                    {
+                         if (isFull(stack))
+                         return;
+                         stack->array[++stack->top] = item;
+                         printf("%d pushed to stackn", item);
+                    }
+                    int pop(struct Stack* stack)
+                    {
+                          if (isEmpty(stack))
+                          return INT_MIN;
+                          return stack->array[stack->top--];
+                    }
+                    int peek(struct Stack* stack)
+                    {
+                          if (isEmpty(stack))
+                          return INT_MIN;
+                          return stack->array[stack->top];
+                    }
+                    int main()
+                    {
+                          struct Stack* stack = createStack(100);
+                          push(stack, 11);
+                          push(stack, 12);
+                          push(stack, 33);
+                          printf("%d popped from stackn", pop(stack));
+                          return 0;
+                    }
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Queue">
+            <header>Queue</header>
+            <article>
+                <p>
+                    A Queue is a linear data structure that stores a collection of elements. The queue operates on first
+                    in first out (FIFO) algorithm.
+                </p>
+                <p>
+                    Consider an example:
+                    <br>
+                    You are visiting a doctor for a check-up. There are many people at the clinic. A lady is entering
+                    the names of all the people in a file. The person who comes first gets places first. When the doctor
+                    is free, he calls the first patient inside. This is a queue and follows a first in first out method
+                    as the first person to enter his name in the list gets treated first.
+                    <br>
+                    The people who are treated their names are removed from the list. This is how a queue works.
+                    <br>
+                    There are 2 pointers, the front is at the front of the queue and rear is at the back of the queue.
+                    We add elements from the back of the queue and remove them from the front of the queue.
+                </p>
+
+                <code>#include&lt;stdio.h&gt;
+                    #define SIZE 5
+                    void enQueue(int);
+                    void deQueue();
+                    void display();
+                    int items[SIZE], front = -1, rear = -1;
+                    int main()
+                    {
+                         deQueue();
+                         enQueue(1);
+                         enQueue(2);
+                         enQueue(3);
+                         enQueue(4);
+                         enQueue(5);
+                         enQueue(6);
+                         display();
+                         deQueue();
+                         display();
+                         return 0;
+                    }
+                    void enQueue(int value)
+                    {
+                         if(rear == SIZE-1)
+                               printf("nQueue is Full!!");
+                         else
+                         {
+                               if(front == -1)
+                               front = 0;
+                               rear++;
+                               items[rear] = value;
+                               printf("nInserted -> %d", value);
+                         }
+                    }
+                    void deQueue()
+                    {
+                          if(front == -1)
+                          printf("nQueue is Empty!!");
+                          else
+                          {
+                                printf("nDeleted : %d", items[front]);
+                                front++;
+                                if(front > rear)
+                                       front = rear = -1;
+                          }
+                    }
+                    void display(){
+                          if(rear == -1)
+                                printf("nQueue is Empty!!!");
+                          else
+                          {
+                                int i;
+                                printf("nQueue elements are:n");
+                                for(i=front; i&lt;=rear; i++)
+                                     printf("%dt",items[i]);
+                           }
+                    }
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Linked_List">
+            <header>Linked List</header>
+            <article>
+                <p>
+                    A Linked List is a data structure. It is linear. The Linked List is like an array but, the Linked
+                    List is not stored sequentially in the memory. Every linked list has 2 parts, the data section and
+                    the address section that holds the address of the next element in the list, which is called a node.
+                    <br>
+                    The size of the linked list is not fixed, and data items can be added at any locations in the list.
+                    The disadvantage is that to get to a node, we must traverse to from the first node to the node that
+                    we require.
+                    <br>
+                    There are three types of link lists:
+                </p>
+                <ul>
+                    <li>
+                        Singly link list
+                    </li>
+                    <li>
+                        Doubly Link List
+                    </li>
+                    <li>
+                        Circular link list
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Binary_Tree">
+            <header>Binary Tree</header>
+            <article>
+                <p>
+                    A tree is a data structure that has one root node and many sub-nodes. It is another one of the data
+                    structures which are designed on top of a linked list.
+                </p>
+                <img src="https://www.edureka.co/blog/wp-content/uploads/2019/08/tree.png" alt="binary tree">
+            </article>
+        </section>
+        <section class="main-section" id="Hash_Table">
+            <header>Hash Table</header>
+            <article>
+                <p>
+                    Hash table is another data structure. It is used to implement an associative array, a structure that
+                    can map keys to values. Hash table uses a hash function to compute an index into an array of
+                    buckets. Hash tables are very useful data structures.
+                </p>
+                <img src="https://www.tutorialspoint.com/data_structures_algorithms/images/hash_function.jpg"
+                    alt="hash table">
+            </article>
+        </section>
+
+    </main>
+</body>
+
+</html>
